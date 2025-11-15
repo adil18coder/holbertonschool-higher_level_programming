@@ -2,4 +2,4 @@
 str1 = "object-oriented "
 str2 = "programming with Python"
 # concat
-print(str1 + str2[:])
+print(str1 + str2)
