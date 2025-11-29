@@ -1,3 +1,26 @@
-[1, 4, 2, 3, 5]
-[1, 2, 3, 4, 5]
-[1, 4, 2, 3, 5]
+"""
+Test MyList class
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> print(my_list)
+[3, 1, 2]
+>>> my_list.print_sorted()
+[1, 2, 3]
+>>> print(my_list)
+[3, 1, 2]
+
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+>>> neg_list = MyList()
+>>> neg_list.append(-1)
+>>> neg_list.append(-5)
+>>> neg_list.append(0)
+>>> neg_list.print_sorted()
+[-5, -1, 0]
+"""
