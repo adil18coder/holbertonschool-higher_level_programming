@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
 Bu modul lookup funksiyasını ehtiva edir.
-lookup(obj) funksiyası obyektin atribut və metodlarını siyahı şəklində qaytarır.
+lookup(obj) funksiyası obyektin atribut və metodlarını
+siyahı şəklində qaytarır.
 """
+
 
 def lookup(obj):
     """
