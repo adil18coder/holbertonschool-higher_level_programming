@@ -1,0 +1,4 @@
+t
+            return {a: getattr(self, a) for a in attrs if hasattr(self, a)}
+        # Return all attributes
+        return self.__dict__.copy()

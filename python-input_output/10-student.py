@@ -5,8 +5,7 @@ representation for JSON serialization.
 
 
 class Student:
-    """Student class with public attributes and
- a method to return dictionary
+    """Student class with public attributes and a method to return dictionary
     representation, optionally filtered by attribute names.
     """
 
