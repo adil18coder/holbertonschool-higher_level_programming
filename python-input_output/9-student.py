@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that defines a Student class and returns its dictionary representation
+"""Module that defines a Student class and
+ returns its dictionary representation
 for JSON serialization.
 """
 
