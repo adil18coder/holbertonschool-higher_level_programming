@@ -23,4 +23,3 @@ Test MyList class
 >>> neg_list.append(0)
 >>> neg_list.print_sorted()
 [-5, -1, 0]
-"""
