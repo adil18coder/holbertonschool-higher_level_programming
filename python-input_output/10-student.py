@@ -21,7 +21,5 @@ class Student:
         are included. Otherwise, all attributes are returned.
         """
         if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
-            # Filter attributes by attrs list
             return {a: getattr(self, a) for a in attrs if hasattr(self, a)}
-        # Return all attributes
         return self.__dict__.copy()
