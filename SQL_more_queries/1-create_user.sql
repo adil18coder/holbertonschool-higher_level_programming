@@ -1,7 +1,8 @@
--- Show grants for user_0d_1 if exists
-SHOW GRANTS FOR 'user_0d_1'@'localhost';
+-- Create user user_0d_1 if it does not exist
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
 
--- Show grants for user_0d_2 if exists
--- user_0d_2 hələ mövcud olmaya bilər, error çıxmasın deyə bu hissəni əvvəlcə yarada bilərsən
-CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
-SHOW GRANTS FOR 'user_0d_2'@'localhost';
+-- Grant all privileges to user_0d_1
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
+
+-- Apply changes
+FLUSH PRIVILEGES;
