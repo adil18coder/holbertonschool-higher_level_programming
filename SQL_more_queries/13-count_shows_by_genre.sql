@@ -1,7 +1,6 @@
--- List all genres with number of shows linked
-SELECT genres.name AS genre, COUNT(tv_show_genres.show_id) AS number_of_shows
-FROM genres
-JOIN tv_show_genres ON genres.id = tv_show_genres.genre_id
-GROUP BY genres.id
-HAVING number_of_shows > 0
+SELECT g.name AS genre,
+       COUNT(tg.show_id) AS number_of_shows
+FROM tv_show_genres tg
+JOIN tv_genres g ON tg.genre_id = g.id
+GROUP BY g.id
 ORDER BY number_of_shows DESC;
