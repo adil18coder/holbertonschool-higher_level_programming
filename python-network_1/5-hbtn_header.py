@@ -6,10 +6,12 @@
 import requests
 import sys
 
-url = sys.argv[1]
 
-# Send GET request
-response = requests.get(url)
+def get_x_request_id(url):
+    """Fetch a URL and print the X-Request-Id header value"""
+    response = requests.get(url)
+    print(response.headers.get("X-Request-Id"))
 
-# Print X-Request-Id header value
-print(response.headers.get("X-Request-Id"))
+
+if __name__ == "__main__":
+    get_x_request_id(sys.argv[1])
