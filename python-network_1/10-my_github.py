@@ -11,7 +11,8 @@ def get_github_id(username, token):
     """Fetch GitHub user ID using provided username and personal access token"""
     url = "https://api.github.com/user"
     response = requests.get(
-        url, auth=(username, token)
+        url,
+        auth=(username, token)
     )
     try:
         user_data = response.json()
