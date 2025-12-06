@@ -12,7 +12,10 @@ def get_github_id(username, token):
     url = "https://api.github.com/user"
     response = requests.get(
         url,
-        auth=(username, token)
+        auth=(
+            username,
+            token
+        )
     )
     try:
         user_data = response.json()
