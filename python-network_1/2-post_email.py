@@ -6,6 +6,11 @@
 from urllib import request, parse
 import sys
 
+# Sınaq üçün arqument yoxlaması
+if len(sys.argv) < 3:
+    print("Usage: ./2-post_email.py <URL> <email>")
+    sys.exit(1)
+
 url = sys.argv[1]
 email = sys.argv[2]
 
