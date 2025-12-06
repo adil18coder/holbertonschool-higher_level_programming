@@ -6,6 +6,10 @@
 from urllib import request
 import sys
 
+if len(sys.argv) < 2:
+    print("Usage: ./1-hbtn_header.py <URL>")
+    sys.exit(1)
+
 url = sys.argv[1]
 
 # Open the URL using a with statement
