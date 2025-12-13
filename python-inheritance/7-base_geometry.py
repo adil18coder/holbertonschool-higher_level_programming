@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-This module defines a BaseGeometry class.
-"""
+"""BaseGeometry module"""
 
 
 class BaseGeometry:
-    """
-    BaseGeometry class with area and integer validation methods.
-    """
+    """BaseGeometry class"""
 
     def area(self):
         raise Exception("area() is not implemented")
