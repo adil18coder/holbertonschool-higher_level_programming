@@ -1,3 +1,5 @@
+>>> from 7-base_geometry import BaseGeometry
+
 ##
 # Test that area() raises an Exception with the correct message
 >>> bg = BaseGeometry()
@@ -6,18 +8,24 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
 ##
-# Test integer_validator
+# Test integer_validator with valid value (no exception)
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 89)
 
+##
+# Test integer_validator with negative value
 >>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
+##
+# Test integer_validator with zero
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
+##
+# Test integer_validator with non-integer
 >>> bg.integer_validator("age", "Sally")
 Traceback (most recent call last):
 TypeError: age must be an integer
