@@ -1,33 +1,5 @@
-"""
-Test BaseGeometry class
-
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry()
-
-# area() should raise Exception
->>> bg.area()
-Traceback (most recent call last):
-...
-Exception: area() is not implemented
-
-# integer_validator with valid integers
->>> bg.integer_validator("my_int", 12)
->>> bg.integer_validator("width", 89)
-
-# integer_validator with non-integer
->>> bg.integer_validator("name", "John")
-Traceback (most recent call last):
-...
-TypeError: name must be an integer
-
-# integer_validator with zero
->>> bg.integer_validator("age", 0)
-Traceback (most recent call last):
-...
-ValueError: age must be greater than 0
-
-# integer_validator with negative value
->>> bg.integer_validator("distance", -4)
-Traceback (most recent call last):
-...
-ValueError: distance must be greater than 0
+test_area_raises_exception
+test_integer_validator_with_non_integer
+test_integer_validator_with_zero
+test_integer_validator_with_negative
+test_integer_validator_with_valid_values
