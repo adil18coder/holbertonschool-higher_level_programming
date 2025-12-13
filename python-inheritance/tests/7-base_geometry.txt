@@ -1,3 +1,27 @@
+##
+# Test that area() raises an Exception with the correct message
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+##
+# Test integer_validator
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", 89)
+
+>>> bg.integer_validator("age", -4)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> bg.integer_validator("age", "Sally")
+Traceback (most recent call last):
+TypeError: age must be an integer
+
 test_area_raises_exception
 test_integer_validator_with_non_integer
 test_integer_validator_with_zero
